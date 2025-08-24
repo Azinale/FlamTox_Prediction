@@ -5,21 +5,6 @@ Dự án này triển khai thuật toán MFEA-II (Multifactorial Evolutionary Al
 1. Độc tính (Toxicity - pIGC50)
 2. Khả năng cháy (Flammability - sdg)
 
-## Cấu trúc thư mục
-```
-final_code/
-├── config.py                    # Cấu hình cho RDKit và MFEA-II
-├── process_rdkit.py             # Xử lý dữ liệu với RDKit
-├── data_processor.py            # Xử lý dữ liệu cho MFEA-II
-├── mfea_optimizer.py            # Triển khai thuật toán MFEA-II
-├── main.py                      # Chạy thuật toán chính
-└── Data/                        # Thư mục chứa dữ liệu
-    ├── pIGC50.csv               # Dữ liệu độc tính
-    ├── lflt.csv                 # Dữ liệu nhiệt độ cháy
-    ├── pIGC50_description.csv   # Dữ liệu độc tính đã được giải thích
-    └── lflt_description.csv     # Dữ liệu nhiệt độ cháy đã được giải thích
-```
-
 ## Yêu cầu
 - Python 3.7+
 - Các thư viện cần thiết:
@@ -53,6 +38,8 @@ python process_rdkit.py
 python main.py
 ```
 - Đọc dữ liệu đã được xử lý
+- Lựa chọn chạy GA hoặc MFEA-II
+- Chạy GA để chọn lọc features
 - Chạy thuật toán MFEA-II để chọn lọc features
 - In kết quả cuối cùng
 
